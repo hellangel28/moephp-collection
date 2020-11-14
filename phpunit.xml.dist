@@ -1,0 +1,24 @@
+<phpunit
+        colors="true"
+        backupGlobals="true"
+        bootstrap="./vendor/autoload.php"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        stopOnFailure="false"
+        verbose="true"
+>
+    <testsuites>
+        <testsuite name="moePHP">
+            <directory>./tests/MoePHP4</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory>./src</directory>
+            <exclude>
+                <!--<directory>src/something/not/important</directory>-->
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>

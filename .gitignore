@@ -1,0 +1,14 @@
+#composer
+composer.lock
+/vendor/*
+
+#php unit
+phpunit.xml
+.phpunit.result.cache
+**/.phpunit.result.cache
+
+### Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
+# User-specific stuff:
+.idea
+
+

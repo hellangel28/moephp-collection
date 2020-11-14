@@ -1,0 +1,36 @@
+{
+  "name": "hellangel28/moephp4-collection",
+  "version": "1.0",
+  "description": "MoePHP4 Collection",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Thomas Moser",
+      "email": "t.moser@moetech.de"
+    }
+  ],
+  "type": "library",
+  "config": {
+    "platform": {
+      "php": "7.4.0"
+    },
+    "preferred-install": "dist"
+  },
+  "require": {
+    "php": "7.4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.2",
+    "phpunit/php-code-coverage": "^6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "MoePHP4\\Collections\\": "src/MoePHP4/Collections/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\MoePHP4\\Collections\\": "tests/MoePHP4/Collections/"
+    }
+  }
+}
