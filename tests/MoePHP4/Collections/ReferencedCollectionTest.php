@@ -25,6 +25,7 @@ class ReferencedCollectionTest extends TestCase
         $arr = [1, 2, 3];
         $collection = new ReferencedCollection($arr);
         $unwrapped = ReferencedCollection::unwrap($collection);
+        unset($arr[0]);
         $this->assertSame(count($arr), count($unwrapped));
     }
 

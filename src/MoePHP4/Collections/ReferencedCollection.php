@@ -20,7 +20,7 @@ class ReferencedCollection implements ArrayAccess, Iterator, Countable
 
     /**
      * If collection, returns the unwrapped array from a collection, if array returns the array, otherwise throws an exception
-     * Note: This will return a reference!
+     * Note: This will return a copy of the array!
      * @param $arrayOrCollection
      * @return array
      * @throws CollectionException
