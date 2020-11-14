@@ -20,12 +20,12 @@ class ReferencedCollection implements ArrayAccess, Iterator, Countable
 
     /**
      * If collection, returns the unwrapped array from a collection, if array returns the array, otherwise throws an exception
-     * Note: This will return a copy of the array!
+     * Note: This will return a reference of the underlying array!
      * @param $arrayOrCollection
      * @return array
      * @throws CollectionException
      */
-    public static function &unwrap($arrayOrCollection): ?array
+    public static function &unwrap($arrayOrCollection): array
     {
         if (is_array($arrayOrCollection)) {
             return $arrayOrCollection;

@@ -24,7 +24,7 @@ class ReferencedCollectionTest extends TestCase
     {
         $arr = [1, 2, 3];
         $collection = new ReferencedCollection($arr);
-        $unwrapped = ReferencedCollection::unwrap($collection);
+        $unwrapped = &ReferencedCollection::unwrap($collection);
         $this->assertSame(count($arr), count($unwrapped));
     }
 
@@ -40,6 +40,19 @@ class ReferencedCollectionTest extends TestCase
         $this->assertSame($unwrapped, $wrapped);
     }
 
+    /**
+     *
+     */
+    public function testStaticUnwrap_isReference()
+    {
+        $arr = [1, 2, 3];
+        $collection = new ReferencedCollection($arr);
+        $unwrapped = ReferencedCollection::unwrap($collection);
+        $this->assertSame(3, count($unwrapped));
+        unset($arr[0]);
+        $unwrapped = ReferencedCollection::unwrap($collection);
+        $this->assertSame(2, count($unwrapped));
+    }
 
     /**
      *
